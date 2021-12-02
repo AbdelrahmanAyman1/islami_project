@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:background="#00FFFFFF"
-        android:src="@drawable/icplay"
+        android:src="@drawable/ic_play"
         app:layout_constraintBottom_toBottomOf="@id/iconBack"
         app:layout_constraintStart_toEndOf="@id/iconBack"
         app:layout_constraintTop_toTopOf="@id/iconBack" />

@@ -1,10 +1,10 @@
 package com.example.islami
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 
@@ -144,12 +144,29 @@ class QuranFragment : Fragment() {
 
     fun initRecyclerView() {
         recyclerView = requireView().findViewById(R.id.recycler_View)
-        adapter = SuraNamesAdapter(chaptersNames)
+        adapter = SuraNamesAdapter(getSuraList())
         adapter.onItemClickListener = object : SuraNamesAdapter.OnItemClickListener {
-            override fun onItemClick(pos: Int, name: String) {
-                Toast.makeText(requireActivity(), name, Toast.LENGTH_SHORT).show()
+            override fun onItemClick(position: Int, item: Sura) {
+                showSuraDetalis(position, item)
             }
+
+
         }
         recyclerView.adapter = adapter
+    }
+
+    private fun showSuraDetalis(position: Int, sura: Sura) {
+        val intent = Intent(requireContext(), SuraDetailsActivity::class.java)
+        intent.putExtra(Constants.EXTRA_SURA_NAME, sura.name)
+        intent.putExtra(Constants.EXTRA_SURA_POS, position)
+        startActivity(intent)
+    }
+
+    private fun getSuraList(): List<Sura> {
+
+        val suraList = chaptersNames.map {
+            return@map Sura(name = it)
+        }
+        return suraList
     }
 }
