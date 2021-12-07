@@ -1,10 +1,10 @@
 package com.example.islami
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 
@@ -79,13 +79,28 @@ class HadethFragment : Fragment() {
     }
 
     fun initRecyclerView() {
-        recyclerView = requireView().findViewById(R.id.recycler_View)
-        adapter = HadethNumAdapter(hadethNum)
+        recyclerView = requireView().findViewById(R.id.recycler_View_hadeth)
+        adapter = HadethNumAdapter(getHadethList())
         adapter.onItemClickListener = object : HadethNumAdapter.OnItemClickListener {
-            override fun onItemClick(pos: Int, name: String) {
-                Toast.makeText(requireActivity(), name, Toast.LENGTH_SHORT).show()
+            override fun onItemClick(pos: Int, item: Hadeth) {
+                showHadethDetalis(pos, item)
             }
         }
         recyclerView.adapter = adapter
+    }
+
+    private fun showHadethDetalis(position: Int, hadeth: Hadeth) {
+        val intent = Intent(requireContext(), HadetDetailsActivity::class.java)
+        intent.putExtra(Constants.EXTRA_HADETH_NAME, hadeth.name)
+        intent.putExtra(Constants.EXTRA_HADETH_POS, position)
+        startActivity(intent)
+    }
+
+    private fun getHadethList(): List<Hadeth> {
+
+        val hadethList = hadethNum.map {
+            return@map Hadeth(name = it)
+        }
+        return hadethList
     }
 }
