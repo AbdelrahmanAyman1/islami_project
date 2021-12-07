@@ -10,6 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Islami">
         <activity
+            android:name=".HadetDetailsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_hadet_details"
+            android:theme="@style/Theme.Islami.NoActionBar" />
+        <activity
+            android:name=".HadethDetailsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_hadeth_details"
+            android:theme="@style/Theme.Islami.NoActionBar" />
+        <activity
             android:name=".SuraDetailsActivity"
             android:exported="false"
             android:label="@string/title_activity_sura_details"

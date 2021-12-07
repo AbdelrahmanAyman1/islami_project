@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class HadethNumAdapter(val items: List<String>) :
+class HadethNumAdapter(val hadethList: List<Hadeth>) :
     RecyclerView.Adapter<HadethNumAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -16,22 +16,22 @@ class HadethNumAdapter(val items: List<String>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val hadethNum = items.get(position)
-        holder.name.text = hadethNum
+        val item = hadethList.get(position)
+        holder.name.text = item.name
         if (onItemClickListener != null) {
             holder.itemView.setOnClickListener {
-                onItemClickListener?.onItemClick(position, hadethNum)
+                onItemClickListener?.onItemClick(position, item)
             }
         }
     }
 
-    override fun getItemCount(): Int = items.size
+    override fun getItemCount(): Int = hadethList.size
 
 
     var onItemClickListener: OnItemClickListener? = null
 
     interface OnItemClickListener {
-        fun onItemClick(pos: Int, name: String) {
+        fun onItemClick(pos: Int, item: Hadeth) {
 
         }
     }

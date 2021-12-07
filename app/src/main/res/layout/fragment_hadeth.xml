@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@id/hadeth_num" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_View"
+        android:id="@+id/recycler_View_hadeth"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
