@@ -1,4 +1,4 @@
-package com.example.islami
+package com.example.islami.ui.hadethDetails
 
 data class Hadeth(
     val name: String,

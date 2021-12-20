@@ -1,4 +1,4 @@
-package com.example.islami
+package com.example.islami.ui.home.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.example.islami.*
+import com.example.islami.ui.hadethDetails.HadetDetailsActivity
+import com.example.islami.ui.hadethDetails.Hadeth
 
 class HadethFragment : Fragment() {
     val hadethNum = listOf(

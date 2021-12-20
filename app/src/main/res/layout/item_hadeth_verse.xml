@@ -12,7 +12,7 @@
         android:fontFamily="@font/koufi"
         android:gravity="center"
         android:padding="12dp"
-        android:textColor="@color/black"
+        android:textColor="@color/textHadethAndQuran"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,10 +22,10 @@
     <View
         android:layout_width="0dp"
         android:layout_height="3dp"
-        android:background="@color/gold"
+        android:background="@color/backGroundView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/content"
+        app:layout_constraintTop_toBottomOf="@id/content_hadeth"
         app:layout_constraintWidth_percent=".7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,11 @@
-package com.example.islami
+package com.example.islami.ui.home.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.islami.R
 
 class RadioFragment : Fragment() {
     override fun onCreateView(

@@ -1,4 +1,4 @@
-package com.example.islami
+package com.example.islami.ui.suraDetails
 
 data class Sura(
     val name: String,

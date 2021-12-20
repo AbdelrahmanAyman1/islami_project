@@ -2,16 +2,30 @@
     <!-- Base application theme. -->
     <style name="Theme.Islami" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/gold</item>
-        <item name="colorPrimaryVariant">@color/goldDark</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/backGround</item>
+        <item name="colorPrimaryVariant">@color/button</item>
+        <item name="colorOnPrimary">@color/textHadethAndQuran</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/white</item>
-        <item name="colorSecondaryVariant">@color/white
-        </item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">@color/iconAndText</item>
+        <item name="colorSecondaryVariant">@color/iconAndText</item>
+        <item name="colorOnSecondary">@color/textHadethAndQuran</item>
+        <item name="homeAsUpIndicator">@drawable/ic_action_name</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="bottom_navigation_bar_theme">
+        <item name="android:background">@color/backGround</item>
+    </style>
+
+    <style name="Theme.Islami.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Islami.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Islami.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

@@ -1,4 +1,4 @@
-package com.example.islami
+package com.example.islami.ui.home.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.example.islami.*
+import com.example.islami.ui.suraDetails.Sura
+import com.example.islami.ui.suraDetails.SuraDetailsActivity
 
 class QuranFragment : Fragment() {
     val chaptersNames = listOf(
