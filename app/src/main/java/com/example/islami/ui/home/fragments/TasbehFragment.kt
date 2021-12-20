@@ -1,4 +1,4 @@
-package com.example.islami
+package com.example.islami.ui.home.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import com.example.islami.R
 
 class TasbehFragment : Fragment() {
     lateinit var tasbehNum: Button

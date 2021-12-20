@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Islami">
         <activity
-            android:name=".HadetDetailsActivity"
+            android:name=".ui.hadethDetails.HadetDetailsActivity"
             android:exported="false"
             android:label="@string/title_activity_hadet_details"
             android:theme="@style/Theme.Islami.NoActionBar" />
@@ -20,15 +20,15 @@
             android:label="@string/title_activity_hadeth_details"
             android:theme="@style/Theme.Islami.NoActionBar" />
         <activity
-            android:name=".SuraDetailsActivity"
+            android:name=".ui.suraDetails.SuraDetailsActivity"
             android:exported="false"
             android:label="@string/title_activity_sura_details"
             android:theme="@style/Theme.Islami.NoActionBar" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".ui.home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".SpalshActivity"
+            android:name=".ui.splash.SpalshActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

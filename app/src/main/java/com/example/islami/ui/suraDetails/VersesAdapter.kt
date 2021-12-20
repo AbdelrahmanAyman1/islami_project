@@ -1,10 +1,11 @@
-package com.example.islami
+package com.example.islami.ui.suraDetails
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.islami.R
 
 class VersesAdapter : RecyclerView.Adapter<VersesAdapter.ViewHolder>() {
     var verses: List<String>? = null

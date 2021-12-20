@@ -1,10 +1,12 @@
-package com.example.islami
+package com.example.islami.ui.home.fragments
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.islami.R
+import com.example.islami.ui.hadethDetails.Hadeth
 
 class HadethNumAdapter(val hadethList: List<Hadeth>) :
     RecyclerView.Adapter<HadethNumAdapter.ViewHolder>() {
@@ -12,7 +14,7 @@ class HadethNumAdapter(val hadethList: List<Hadeth>) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_hadeth_name, parent, false)
-        return HadethNumAdapter.ViewHolder(view)
+        return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
